@@ -18,8 +18,19 @@ class BookingTicketsController extends Controller
     }
 
     public function bookTickets(Request $request){
-        $name = $request->input("name");
-        $email = $request->input("email");
-        return $name;
+        
+       // $name = $request->input("name");
+       // $email = $request->input("email");
+       try{
+
+        BookedTicket::create($request->input());
+
+       }catch(Exception $exception){
+
+          return response()->json(['status'=>'failed', 'message'=>$exception->getmessage()]);
+
+       }
+
+       
     }
 }
