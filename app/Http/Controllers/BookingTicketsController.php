@@ -18,7 +18,7 @@ class BookingTicketsController extends Controller
     }
 
     public function bookTickets(Request $request){
-        
+
        // $name = $request->input("name");
        // $email = $request->input("email");
        try{
@@ -31,6 +31,6 @@ class BookingTicketsController extends Controller
 
        }
 
-       
+
     }
 }

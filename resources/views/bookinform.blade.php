@@ -15,13 +15,13 @@
     <label for="from">From</label>
     <select name="from-station" id="from-station">
     @foreach($stations as $station)
-       <option value="{{ $station->id }}">{{ $station->name }}</option>
+       <option value="{{ $station->name }}">{{ $station->name }}</option>
     @endforeach
     </select><br/><br/>
     <label for="from">To</label>
     <select name="to-station" id="to-station">
     @foreach($stations as $station)
-       <option value="{{ $station->id }}">{{ $station->name }}</option>
+       <option value="{{ $station->name }}">{{ $station->name }}</option>
     @endforeach
     </select><br/><br/>
     <label for="from">Select Seat</label>
@@ -29,7 +29,7 @@
     @foreach($seats as $seat)
        <option value="{{ $seat->id }}">{{ $seat->name }}</option>
     @endforeach
-    </select><br/><br/>   
+    </select><br/><br/>
     <input type="submit" value="Submit">
 </body>
 </html>
